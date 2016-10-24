@@ -39,8 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ContextStates\CharCheckContextState.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="ContextStates\ContextState.cs" />
+    <Compile Include="ContextStates\ContextStateManager.cs" />
+    <Compile Include="ContextStates\FinishCheckContextState.cs" />
+    <Compile Include="ISentenceSegmenter.cs" />
+    <Compile Include="PairSign.cs" />
+    <Compile Include="ContextStates\PairSignCloseContextState.cs" />
+    <Compile Include="ContextStates\PairSignContextState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SentenceSegmenter.cs" />
+    <Compile Include="Sign.cs" />
+    <Compile Include="ContextStates\SplitContextState.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
