@@ -39,8 +39,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CharacterUtil.cs" />
+    <Compile Include="DictSegment.cs" />
+    <Compile Include="FinalSeg\FinalSeg.cs" />
+    <Compile Include="FinalSeg\IFinalSeg.cs" />
+    <Compile Include="Hit.cs" />
+    <Compile Include="ILexcionCustomizable.cs" />
+    <Compile Include="IWordSegmenter.cs" />
+    <Compile Include="JiebaSegmenter.cs" />
+    <Compile Include="Pair.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SegMode.cs" />
+    <Compile Include="SegToken.cs" />
+    <Compile Include="TrieDictionary.cs" />
+    <Compile Include="WordAttribute.cs" />
+    <Compile Include="WordSegmentDictionary.cs" />
+    <Compile Include="WordSegmenter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataModels\BasicUnit\BasicUnit.csproj">
+      <Project>{130e2f47-9601-44ab-809b-73a66919efda}</Project>
+      <Name>BasicUnit</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

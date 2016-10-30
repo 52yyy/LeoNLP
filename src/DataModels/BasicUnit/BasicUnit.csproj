@@ -39,10 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IInitializable.cs" />
     <Compile Include="IPosition.cs" />
     <Compile Include="IWord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sentence.cs" />
+    <Compile Include="Trie\IPrefixMatcher.cs" />
+    <Compile Include="Trie\PrefixMatcher.cs" />
+    <Compile Include="Trie\Trie.cs" />
+    <Compile Include="Trie\TrieNode.cs" />
     <Compile Include="Word.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
