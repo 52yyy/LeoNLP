@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BasicUnit
+namespace BasicUnit.Trie
 {
     /// <summary>
     /// Search through a trie for all the strings which have a given prefix which will be entered character by character.

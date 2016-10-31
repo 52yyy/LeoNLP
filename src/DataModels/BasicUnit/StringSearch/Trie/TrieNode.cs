@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BasicUnit
+namespace BasicUnit.Trie
 {
     /// <summary>
     /// Node of the trie.

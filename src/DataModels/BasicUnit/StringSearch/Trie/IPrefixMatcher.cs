@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BasicUnit
+namespace BasicUnit.Trie
 {
 	public interface IPrefixMatcher<V> where V : class
     {

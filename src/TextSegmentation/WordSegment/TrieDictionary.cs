@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 using BasicUnit;
+using BasicUnit.Trie;
 
 namespace WordSegment
 {

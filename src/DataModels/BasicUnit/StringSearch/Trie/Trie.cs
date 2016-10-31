@@ -1,4 +1,4 @@
-﻿namespace BasicUnit
+﻿namespace BasicUnit.Trie
 {
 	/// <summary>
     /// Trie data structure which maps strings to generic values.

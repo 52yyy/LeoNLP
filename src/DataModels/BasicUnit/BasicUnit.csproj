@@ -39,17 +39,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StringSearch\DoubleArrayTrie\BiMap.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\Context.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\BCheckContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\ContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\ContextStateBuilder.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\DeleteInsertContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\DeletePrefixCollisionUpdateContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\DeleteTailCollisionUpdateContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\GCheckContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\IndexInsertContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\IndexPrefixCollisionUpdateContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\IndexTailCollisionUpdateContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\InsertContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\PrefixCollisionUpdateContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\SearchInsertContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\SearchPrefixCollisionUpdateContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\SearchTailCollisionUpdateContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\ContextState\TailCollisionUpdateContextState.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\DATrie.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\DATrieNode.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\DoubleArrayTrie.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\IDATrieNodeInstanceCreator.cs" />
+    <Compile Include="StringSearch\DoubleArrayTrie\TrieState\TrieState.cs" />
     <Compile Include="IInitializable.cs" />
     <Compile Include="IPosition.cs" />
     <Compile Include="IWord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sentence.cs" />
-    <Compile Include="Trie\IPrefixMatcher.cs" />
-    <Compile Include="Trie\PrefixMatcher.cs" />
-    <Compile Include="Trie\Trie.cs" />
-    <Compile Include="Trie\TrieNode.cs" />
+    <Compile Include="StringSearch\AhoCorasick\AhoCorasickStringSearch.cs" />
+    <Compile Include="StringSearch\IStringSearchAlgorithm.cs" />
+    <Compile Include="StringSearch\StringSearchResult.cs" />
+    <Compile Include="StringSearch\Trie\IPrefixMatcher.cs" />
+    <Compile Include="StringSearch\Trie\PrefixMatcher.cs" />
+    <Compile Include="StringSearch\Trie\Trie.cs" />
+    <Compile Include="StringSearch\Trie\TrieNode.cs" />
     <Compile Include="Word.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
