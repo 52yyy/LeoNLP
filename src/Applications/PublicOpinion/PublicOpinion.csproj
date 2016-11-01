@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CBE890D-B717-4BE4-92E6-2DF0BF653D32}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PublicOpinion</RootNamespace>
+    <AssemblyName>PublicOpinion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CandidatePairExtraction\IContentFeatureExtractor.cs" />
+    <Compile Include="CandidatePairExtraction\IPomFeatureExtractor.cs" />
+    <Compile Include="CandidatePairExtraction\PomFeatureExtractor.cs" />
+    <Compile Include="CandidatePairExtraction\PomFeatureExtractorFactory.cs" />
+    <Compile Include="CandidatePairExtraction\SequenceLabelling\DefaultSegwordRootLayerConvertor.cs" />
+    <Compile Include="CandidatePairExtraction\SequenceLabelling\IRootLayerConvertor.cs" />
+    <Compile Include="CandidatePairExtraction\SequenceLabelling\SegwordRootLayerConvertor.cs" />
+    <Compile Include="CandidatePairExtraction\SequenceLabelling\SequenceSentenceFeatureExtractor.cs" />
+    <Compile Include="CandidatePairExtraction\SequenceLabelling\SequenceSentenceFeatureExtractorFactory.cs" />
+    <Compile Include="CandidatePairExtraction\SequenceLabelling\SmallSegwordRootLayerConvertor.cs" />
+    <Compile Include="CandidatePairExtraction\TagHelper.cs" />
+    <Compile Include="DataModel\BaseWord.cs" />
+    <Compile Include="DataModel\FeatureWord.cs" />
+    <Compile Include="DataModel\Inner\CandidatePublicOpinionPair.cs" />
+    <Compile Include="DataModel\Inner\ChunkFeatureWord.cs" />
+    <Compile Include="DataModel\Inner\ChunkModifyWord.cs" />
+    <Compile Include="DataModel\Inner\ChunkOpinionWord.cs" />
+    <Compile Include="DataModel\Inner\ChunkSentence.cs" />
+    <Compile Include="DataModel\Inner\ChunkStyle.cs" />
+    <Compile Include="DataModel\Inner\ChunkTargetWord.cs" />
+    <Compile Include="DataModel\Inner\ChunkWord.cs" />
+    <Compile Include="DataModel\Inner\LabelledSentence.cs" />
+    <Compile Include="DataModel\Inner\LabelledWord.cs" />
+    <Compile Include="DataModel\Inner\PendingAnalysisPomSentence.cs" />
+    <Compile Include="DataModel\Inner\PendingAnalysisPomSentenceExtractedInfo.cs" />
+    <Compile Include="DataModel\IPosition.cs" />
+    <Compile Include="DataModel\IUnitWordType.cs" />
+    <Compile Include="DataModel\ModifyWord.cs" />
+    <Compile Include="DataModel\OpinionWord.cs" />
+    <Compile Include="DataModel\OrientType.cs" />
+    <Compile Include="DataModel\PomMeta.cs" />
+    <Compile Include="DataModel\PomSentence.cs" />
+    <Compile Include="DataModel\PublicOpinionPair.cs" />
+    <Compile Include="DataModel\PublicOpinionPairCollection.cs" />
+    <Compile Include="DataModel\TargetWord.cs" />
+    <Compile Include="DataModel\UnitChunk.cs" />
+    <Compile Include="DataModel\UnitWord.cs" />
+    <Compile Include="DataModel\UnitWordType.cs" />
+    <Compile Include="Inference\EmptyInferrer.cs" />
+    <Compile Include="Inference\IInferrer.cs" />
+    <Compile Include="IPublicOpinionExtractor.cs" />
+    <Compile Include="Normalization\AutohomeNormalizer.cs" />
+    <Compile Include="Normalization\DefaultPomNormalizer.cs" />
+    <Compile Include="Normalization\IPomNormalizable.cs" />
+    <Compile Include="PairExtraction\CandidatePairExtractor.cs" />
+    <Compile Include="PairExtraction\Check\EmptyPairChecker.cs" />
+    <Compile Include="PairExtraction\Check\IPairFeaturizer.cs" />
+    <Compile Include="PairExtraction\Check\IPublicOpinionPairChecker.cs" />
+    <Compile Include="PairExtraction\Check\PairFeaturizer.cs" />
+    <Compile Include="PairExtraction\Check\PublicOpinionPairChecker.cs" />
+    <Compile Include="PairExtraction\IPomPairParser.cs" />
+    <Compile Include="PairExtraction\PomPairParser.cs" />
+    <Compile Include="PairExtraction\PomPairParserFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicOpinionExtractor.cs" />
+    <Compile Include="Tools\ChunkConvertor.cs" />
+    <Compile Include="Tools\LayerConvertor.cs" />
+    <Compile Include="Tools\ManualLabelledSentenceConvertor.cs" />
+    <Compile Include="Tools\ManualPairFeatureConvertor.cs" />
+    <Compile Include="Tools\NeLayerConvertor.cs" />
+    <Compile Include="Tools\PomModel.cs" />
+    <Compile Include="Tools\PomPair.cs" />
+    <Compile Include="Tools\PositionPomModel.cs" />
+    <Compile Include="Tools\PositionPomPair.cs" />
+    <Compile Include="Tools\PositionPomWord.cs" />
+    <Compile Include="Util\CharacterUtil.cs" />
+    <Compile Include="Util\ChunkHelper.cs" />
+    <Compile Include="Util\LabelledSentenceHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WordSegment\dict.Properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WordSegment\dict.txt" />
+    <Content Include="WordSegment\prob_emit.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CandidatePairExtraction\Foreign\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Classification\NestedClassificationFramework\NestedClassificationFramework.csproj">
+      <Project>{8c77cb7d-746c-4f19-9ffb-4c03c367178e}</Project>
+      <Name>NestedClassificationFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataModels\BasicUnit\BasicUnit.csproj">
+      <Project>{130e2f47-9601-44ab-809b-73a66919efda}</Project>
+      <Name>BasicUnit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SequenceLabeling\NestedSequenceLabelingFramework\NestedSequenceLabelingFramework.csproj">
+      <Project>{b28dd92f-7e35-4e36-97d3-0790b2b29c71}</Project>
+      <Name>NestedSequenceLabelingFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TextSegmentation\Featurization\Featurization.csproj">
+      <Project>{f699a1e9-fefe-4183-963c-1949b0fee305}</Project>
+      <Name>Featurization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TextSegmentation\WordSegment\WordSegment.csproj">
+      <Project>{5a55c1d7-dcfb-4fbc-8553-8583e1ad6c7d}</Project>
+      <Name>WordSegment</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
